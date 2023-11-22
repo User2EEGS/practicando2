@@ -6,38 +6,39 @@ namespace practica3_1
         {
             InitializeComponent();
         }
+        
 
         private void button1_Click(object sender, EventArgs e)
         {
             string textoTelegrama;
-            char tipoTelegrama = 'o';
+            char tipoTelegrama = ' ';
             textoTelegrama = txtTelegrama.Text;
 
             char[] delimitadores = new char[] { ' ', '\r', '\n' };
             int numPalabras = textoTelegrama.Split(delimitadores, StringSplitOptions.RemoveEmptyEntries).Length;
-            double coste;
-            //Leo el telegrama
+            double coste = 0;
+            
 
-            // telegrama urgente?
+            // Si el telegrama es ordinario
             if (ordinario.Checked)
-                tipoTelegrama = 'u';
+                tipoTelegrama = 'o';
 
-            //Si el telegrama es ordinario
-            if (tipoTelegrama == 'o')
+            //Si el telegrama es urgente
+            if (urgente.Checked)
+                tipoTelegrama = 'u';
                 if (numPalabras <= 10)
                     coste = 2.5;
 
                 else
                     coste = 0.5 * (numPalabras - 10) + 2.50;
-            else
+            
             //Si el telegrama es urgente
             if (tipoTelegrama == 'u')
                 if (numPalabras <= 10)
                     coste = 5;
                 else
                     coste = 5 + 0.75 * (numPalabras - 10);
-            else
-                coste = 0;
+           
             txtPrecio.Text = coste.ToString() + " euros";
         }
 
