@@ -19,7 +19,7 @@ namespace practica3_1
             //Leo el telegrama
 
             // telegrama urgente?
-            if (cbUrgente.Checked)
+            if (ordinario.Checked)
                 tipoTelegrama = 'u';
 
             //Si el telegrama es ordinario
@@ -39,6 +39,11 @@ namespace practica3_1
             else
                 coste = 0;
             txtPrecio.Text = coste.ToString() + " euros";
+        }
+
+        private void ordinario_CheckedChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -31,9 +31,10 @@
             label1 = new Label();
             label2 = new Label();
             txtTelegrama = new RichTextBox();
-            cbUrgente = new CheckBox();
             button1 = new Button();
             txtPrecio = new TextBox();
+            ordinario = new RadioButton();
+            urgente = new RadioButton();
             SuspendLayout();
             // 
             // label1
@@ -64,17 +65,6 @@
             txtTelegrama.TabIndex = 2;
             txtTelegrama.Text = "";
             // 
-            // cbUrgente
-            // 
-            cbUrgente.AutoSize = true;
-            cbUrgente.Font = new Font("Segoe UI", 11F, FontStyle.Regular, GraphicsUnit.Point);
-            cbUrgente.Location = new Point(46, 169);
-            cbUrgente.Name = "cbUrgente";
-            cbUrgente.Size = new Size(88, 24);
-            cbUrgente.TabIndex = 3;
-            cbUrgente.Text = "Urgente?";
-            cbUrgente.UseVisualStyleBackColor = true;
-            // 
             // button1
             // 
             button1.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
@@ -93,14 +83,40 @@
             txtPrecio.Size = new Size(114, 23);
             txtPrecio.TabIndex = 5;
             // 
+            // ordinario
+            // 
+            ordinario.AutoSize = true;
+            ordinario.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            ordinario.Location = new Point(45, 170);
+            ordinario.Name = "ordinario";
+            ordinario.Size = new Size(85, 23);
+            ordinario.TabIndex = 6;
+            ordinario.TabStop = true;
+            ordinario.Text = "Ordinario";
+            ordinario.UseVisualStyleBackColor = true;
+            ordinario.CheckedChanged += ordinario_CheckedChanged;
+            // 
+            // urgente
+            // 
+            urgente.AutoSize = true;
+            urgente.Font = new Font("Segoe UI", 10F, FontStyle.Regular, GraphicsUnit.Point);
+            urgente.Location = new Point(139, 170);
+            urgente.Name = "urgente";
+            urgente.Size = new Size(77, 23);
+            urgente.TabIndex = 7;
+            urgente.TabStop = true;
+            urgente.Text = "Urgente";
+            urgente.UseVisualStyleBackColor = true;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(494, 294);
+            Controls.Add(urgente);
+            Controls.Add(ordinario);
             Controls.Add(txtPrecio);
             Controls.Add(button1);
-            Controls.Add(cbUrgente);
             Controls.Add(txtTelegrama);
             Controls.Add(label2);
             Controls.Add(label1);
@@ -115,8 +131,9 @@
         private Label label1;
         private Label label2;
         private RichTextBox txtTelegrama;
-        private CheckBox cbUrgente;
         private Button button1;
         private TextBox txtPrecio;
+        private RadioButton ordinario;
+        private RadioButton urgente;
     }
 }
