@@ -115,7 +115,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Peru;
+            BackColor = Color.Tomato;
             ClientSize = new Size(494, 294);
             Controls.Add(urgente);
             Controls.Add(ordinario);
