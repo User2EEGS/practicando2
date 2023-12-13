@@ -51,8 +51,9 @@
             // label2
             // 
             label2.AutoSize = true;
+            label2.BackColor = Color.Peru;
             label2.Font = new Font("Segoe UI", 11F, FontStyle.Bold, GraphicsUnit.Point);
-            label2.ForeColor = SystemColors.ButtonHighlight;
+            label2.ForeColor = SystemColors.InfoText;
             label2.Location = new Point(44, 235);
             label2.Name = "label2";
             label2.Size = new Size(52, 20);
@@ -114,7 +115,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.Moccasin;
+            BackColor = Color.Peru;
             ClientSize = new Size(494, 294);
             Controls.Add(urgente);
             Controls.Add(ordinario);
